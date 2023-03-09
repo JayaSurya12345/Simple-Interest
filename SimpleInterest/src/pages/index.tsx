@@ -57,7 +57,7 @@ export default function Home() {
           as="font"
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&amp;family=Rubik:wght@400;500;600&amp;display=swap"
         />
-        <meta name="description" content="CAGR Calculator" />
+        <meta name="description" content="Simple Interest Calculator" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
