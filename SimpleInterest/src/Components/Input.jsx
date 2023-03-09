@@ -25,7 +25,7 @@ export default function Input({ id, type = '', min = 0, max, step = 1, value, se
 
     return (
         <div className={styles.inputBox}>
-            <div>
+            <div className=' sm:flex justify-between flex-wrap '>
                 <input
                     type="range"
                     min={min}
