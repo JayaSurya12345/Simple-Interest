@@ -39,7 +39,7 @@ export default function Home() {
     let points = [];
     points.push(0);
     for (let i = 1; i <= timePeriod; i++) {
-      points.push((totalInvestment*interestRate*i)/100);
+      points.push(Math.ceil(totalInvestment*interestRate*i)/100);
     }
     setGraphPoints(points);
   }
@@ -120,7 +120,7 @@ export default function Home() {
                     type='rupees'
                     min={1000}
                     max={10000000}
-                    step={1000}
+                    step={100}
                     value={totalInvestment}
                     setValue={settotalInvestment}
                   />
@@ -134,8 +134,8 @@ export default function Home() {
                     id='finalInvestment'
                     type='percentage'
                     min={1}
-                    max={20}
-                    step={1}
+                    max={50}
+                    step={0.1}
                     value={interestRate}
                     setValue={setinterestRate}
                   />
@@ -147,7 +147,8 @@ export default function Home() {
                   <Input
                     id='timePeriod'
                     min={1}
-                    max={40}
+                    max={30}
+                    step={1}
                     value={timePeriod}
                     setValue={settimePeriod}
                   />
@@ -233,7 +234,7 @@ export default function Home() {
                       <span className={"font-semibold"}>
                         {timePeriod}
                       </span>{" "}
-                      years,{" "}the simple interest earned will be
+                      years,{" "}the simple interest earned will be{" "}
                       <span className={"font-semibold"}>
                       ₹{output.toLocaleString("en-In")}
                       </span>
