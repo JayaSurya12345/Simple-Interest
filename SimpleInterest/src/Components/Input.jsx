@@ -25,27 +25,30 @@ export default function Input({ id, type = '', min = 0, max, step = 1, value, se
 
     return (
         <div className={styles.inputBox}>
-            <div className=' sm:flex justify-between flex-wrap '>
-                <input
-                    type="range"
-                    min={min}
-                    max={max}
-                    step={step}
-                    value={value}
-                    id={id}
-                    onChange={handleValue}
-                    className={' accent-[#00D382] bg-transparent my-4 '}
-                />
-
-                <input
-                    type="text"
-                    value={((type === 'rupees') ? '\u20B9' + value.toLocaleString("en-In"):((type==='percentage')?value.toLocaleString("en-In")+'%':value.toLocaleString("en-In"))) }
-                    id={`${id}Label`}
-                    min={min}
-                    max={max}
-                    className={'w-[150px] h-[40px] bg-[#D1E3FF] bg-opacity-[0.39] border-2 border-solid border-[#9BB0D3] rounded-[100px] text-center font-semibold '}
-                    onChange={handleValue}
-                />
+            <div className='flex justify-between flex-wrap '>
+                <div className='w-[58%]'>
+                    <input
+                        type="range"
+                        min={min}
+                        max={max}
+                        step={step}
+                        value={value}
+                        id={id}
+                        onChange={handleValue}
+                        className={' accent-[#00D382] bg-transparent my-4 '}
+                    />
+                </div>
+                <div className='w-[39%]'>
+                    <input
+                        type="text"
+                        value={((type === 'rupees') ? '\u20B9' + value.toLocaleString("en-In"):((type==='percentage')?value.toLocaleString("en-In")+'%':value.toLocaleString("en-In"))) }
+                        id={`${id}Label`}
+                        min={min}
+                        max={max}
+                        className={' w-full h-[45px] bg-[#D1E3FF] bg-opacity-[0.39] border-2 border-solid border-[#9BB0D3] rounded-[100px] text-center font-semibold '}
+                        onChange={handleValue}
+                    />
+                </div>
             </div>
         </div>
     )
