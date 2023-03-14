@@ -217,7 +217,7 @@ export default function Home() {
                     setCheck(false);
                   }}
                 >
-                  <FaChartPie />
+                  <FaChartPie size={13}/>
                 </button>
               </div>
 
@@ -225,7 +225,7 @@ export default function Home() {
               <div className={" relative object-right-top [@media(min-width:200px)]:h-auto md:w-[100%]"}>
                 {isLineChart ? (
                   <>
-                    <LineChart points={graphPoints} />
+                    <LineChart points={graphPoints}/>
                     <div className={"mb-3"}>
                       For an investment of {" "}
                       <span className={"font-semibold"}>
@@ -277,21 +277,24 @@ export default function Home() {
           {/* Side Pannel */}
           <div
             className={
-              "[@media(max-width:1000px)]:w-[100%] lg:w-[23%] lg:max-h-[516px] xl:max-h-[403px] px-[20px] py-[22px] [@media(max-width:1000px)]:mt-[20px] lg:mt-0 border-2 border-white rounded-[30px] shadow-md shadow-[#505C6227] bg-white bg-opacity-40 backdrop-blur-[30px] overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+              "w-[30%] [@media(max-width:1000px)]:w-[100%] lg:w-[23%] max-h-['inherit'] px-[20px] py-[22px] [@media(max-width:1000px)]:px-[15px] [@media(max-width:1000px)]:py-[20px] [@media(max-width:1000px)]:mt-[20px] lg:mt-0 border-2 border-white rounded-[30px] shadow-md shadow-[#505C6227] bg-white bg-opacity-40 backdrop-blur-[30px] overflow-y-scroll"
             }
           >
             <div className={"font-bold "}>How to use this calculator?</div>
             <CollapsibleBox
               heading={'Simple Interest'}
               content={'Simple interest is a method of calculating the interest on a loan or deposit. It is calculated as the product of the principal amount, interest rate, and time period'}
+              isSidePanel={true}
             />
             <CollapsibleBox
               heading={'Uses of Simple Interest'}
               content={'Simple interest is more advantageous for borrowers than compound interest, as it keeps overall interest payments lower'}
+              isSidePanel={true}
             />
             <CollapsibleBox
               heading={'Calculating simple interest'}
               content={'To calculate simple interest, multiply the principal amount by the interest rate and the time'}
+              isSidePanel={true}
               last={true}
             />
             
@@ -301,7 +304,7 @@ export default function Home() {
         {/* FAQ box */}
         <div
           className={
-            "px-[25px] py-[10px] mt-[40px] border-2 border-white rounded-[30px] shadow-md shadow-[#505C6227] bg-white bg-opacity-40 backdrop-blur-[30px]"
+            "px-[25px] py-[10px] mt-[30px] border-2 border-white rounded-[30px] shadow-md shadow-[#505C6227] bg-white bg-opacity-40 backdrop-blur-[30px]"
           }
         >
           <CollapsibleBox
@@ -328,7 +331,7 @@ export default function Home() {
 
           <CollapsibleBox
             heading={'Why should I use FundsIndia Simple Interest Calculator?'}
-            content={'FundsIndia SI Calculator is an intuitive and easy to use application that can save the time of manually calculating simple interest. It can visualise the interest with principal amount in an easily understandable manner.'}
+            content={"FundsIndia SI Calculator is an intuitive and easy to use application that can save the time of manually calculating simple interest. It can visualise the interest with principal amount in an easily understandable manner."} isLast={true}
           />
         </div>
 
