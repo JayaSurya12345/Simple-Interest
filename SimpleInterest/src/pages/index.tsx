@@ -77,15 +77,15 @@ export default function Home() {
           {/* Heading */}
           <div
             className={
-              "text-zinc-900 text-5xl font-semibold text-center leading-tight [@media(max-width:300px)]:text-3xl"
+              "text-[#000000] text-[40px] font-semibold text-center leading-tight  [@media(max-width:300px)]:text-3xl [@media(max-width:1366px)]:text-[36px]  [@media(min-width:1920px)]:text-[60px] "
             }
           >
             <span className={"text-blue-600"}>Simple Interest</span>{" "}
             Calculator
           </div>
           {/* Subheading */}
-          <p className={"text-neutral-700 mt-3 [@media(min-width:200px)]:text-md [@media(max-width:300px)]:text-sm lg:text-lg text-center  "}>
-          Simple interest is a method of calculating interest over a deposit for a definite period of time.FundsIndia Simple Interest Calculator
+          <p className={"text-[#464143] mt-[10px] text-center  [@media(max-width:300px)]:text-sm text-[14px] [@media(min-width:1920px)]:text-[18px] font-normal "}>
+          Simple interest is a method of calculating interest over a deposit for a definite period of time. FundsIndia Simple Interest Calculator
           can be used to calculate your returns or the interest you owe
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function Home() {
               {/* Input box wrapper */}
               <div
                 className={
-                  "flex flex-col font-medium space-y-[20px]"
+                  "flex-col justify-evenly font-medium text-[14px] [@media(min-width:1920px)]:text-[18px] max-sm:space-y-[12px]  xl:space-y-[20px] sm:space-y-[15px]"
                 }
               >
                 {/* Input box */}
@@ -157,26 +157,27 @@ export default function Home() {
 
               {/* Control Box Wrapper */}
               <div
+            className={
+                "flex flex-warp justify-center mt-[30px] cursor-pointer "
+            }
+        >{/* Control Box Wrapper */}
+
+            {/* Control boxes */}
+            <div
                 className={
-                  "flex flex-warp justify-center mt-[40px] cursor-pointer"
+                    " border-[1px] border-dashed gap-3 border-[#00D382] p-[4px] rounded-[35px] w-[250px] h-[56px] [@media(min-width:1920px)]:w-[350px]  [@media(min-width:1920px)]:h-[66px] flex justify-center items-center  "
                 }
-              >
-                {/* Control boxes */}
+            >
                 <div
-                  className={
-                    "border-[0.1rem] border-dashed border-[#36b366] p-[4px] rounded-[35px] w-[65%]"
-                  }
-                >
-                  <div
                     className={
-                      "text-center text-white font-semibold rounded-[35px] p-[0.3rem] shadow-lg shadow-[#36b3665d] bg-[#00d382]"
+                        "flex justify-center items-center text-[18px] text-white font-semibold rounded-[30px]  w-[242px] h-[48px]  [@media(min-width:1920px)]:w-[342px]  [@media(min-width:1920px)]:h-[58px]  shadow-lg shadow-[#36b3665d] bg-[#00d382]"
                     }
                     onClick={calculate}
-                  >
+                >
                     Calculate
-                  </div>
                 </div>
-              </div>
+            </div>
+        </div>
             </div>
 
             {/* vertical line */}

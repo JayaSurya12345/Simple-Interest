@@ -17,7 +17,6 @@ export default function Chart({ points }) {
         },
 
         xAxis: {
-            // tickInterval: 2,
             labels: {
                 step: 1
             },
