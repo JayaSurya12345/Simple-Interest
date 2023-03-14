@@ -226,7 +226,7 @@ export default function Home() {
                   <>
                     <LineChart points={graphPoints} />
                     <div className={"mb-3"}>
-                      for an investment of {" "}
+                      For an investment of {" "}
                       <span className={"font-semibold"}>
                       ₹{totalInvestment.toLocaleString("en-In")}
                       </span>{" "}at {interestRate}% simple interest for a period of
