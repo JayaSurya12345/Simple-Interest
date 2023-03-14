@@ -295,7 +295,7 @@ export default function Home() {
               heading={'Calculating simple interest'}
               content={'To calculate simple interest, multiply the principal amount by the interest rate and the time'}
               isSidePanel={true}
-              last={true}
+              isLast={true}
             />
             
           </div>
