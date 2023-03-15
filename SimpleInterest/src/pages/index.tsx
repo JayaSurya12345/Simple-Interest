@@ -22,7 +22,7 @@ export default function Home() {
   const [graphPoints, setGraphPoints] = useState([0,5000, 10000, 15000, 20000, 25000]);
   
   function calculate() {
-    simpleInterest = (totalInvestment*interestRate*timePeriod)/100;
+    simpleInterest = Math.round((totalInvestment*interestRate*timePeriod)/100);
     if (simpleInterest === Infinity || isNaN(simpleInterest)) {
       setOutput(0);
     }
@@ -70,7 +70,7 @@ export default function Home() {
 
       <main
         className={
-          "relative [@media(max-width:1200px)]:p-5 [@media(min-width:1200px)]:p-20 w-full overflow-x-hidden flex-col justify-between text-neutral-700"
+          "relative [@media(max-width:1200px)]:p-5 [@media(min-width:1200px)]:p-20 w-full overflow-x-hidden flex-col justify-between text-neutral-700 text-[14px]"
         }
       >
         <div>
