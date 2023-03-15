@@ -160,7 +160,7 @@ export default function Home() {
             className={
                 "flex flex-warp justify-center mt-[30px] cursor-pointer "
             }
-        >{/* Control Box Wrapper */}
+        >
 
             {/* Control boxes */}
             <div
