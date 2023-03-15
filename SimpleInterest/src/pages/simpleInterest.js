@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import Input from "../Components/Input.jsx";
-import LineChart from "../Components/LineChart.jsx";
-import DoughnutChart from "@/Components/DoughnutChart.jsx";
-import CollapsibleBox from "@/Components/CollapsibleBox.jsx";
-import RelatedCalculator from "@/Components/RelatedCalculator.jsx";
+import Input from "../Components/Input.js";
+import LineChart from "../Components/LineChart.js";
+import DoughnutChart from "../Components/DoughnutChart.js";
+import CollapsibleBox from "../Components/CollapsibleBox.js";
+import RelatedCalculator from "../Components/RelatedCalculator.js";
 import { FaChartPie, FaChartLine } from "react-icons/fa";
 import { MdOutlineShowChart } from "react-icons/md";
 
@@ -49,7 +49,7 @@ export default function Home() {
       <Head>
         <title>Simple Interest Calculator</title>
         <link rel="icon" href="./logo.png" />
-        <link href="/dist/output.css" rel="stylesheet" />
+        <link href="/dist/output.scss" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -70,14 +70,14 @@ export default function Home() {
 
       <main
         className={
-          "relative [@media(max-width:1200px)]:p-5 [@media(min-width:1200px)]:p-20 w-full overflow-x-hidden flex-col justify-between text-neutral-700 text-[14px]"
+          "relative [@media(max-width:1200px)]:p-5 [@media(min-width:1200px)]:p-20 w-full overflow-x-hidden flex-col justify-between text-neutral-700 text-[14px] app-bg-container overflow-hidden"
         }
       >
         <div>
           {/* Heading */}
           <div
             className={
-              "text-[#000000] text-[40px] font-semibold text-center leading-tight  [@media(max-width:300px)]:text-3xl [@media(max-width:1366px)]:text-[36px]  [@media(min-width:1920px)]:text-[60px] "
+              "text-[#000000] text-[40px] font-semibold text-center leading-tight  [@media(max-width:300px)]:text-3xl [@media(max-width:1366px)]:text-[36px]  [@media(min-width:1920px)]:text-[60px] mt-[15px]"
             }
           >
             <span className={"text-blue-600"}>Simple Interest</span>{" "}
@@ -225,7 +225,7 @@ export default function Home() {
               <div className={" relative object-right-top [@media(min-width:200px)]:h-auto md:w-[100%]"}>
                 {isLineChart ? (
                   <>
-                    <LineChart points={graphPoints}/>
+                    <LineChart key='' points={graphPoints}/>
                     <div className={"mb-3"}>
                       For an investment of {" "}
                       <span className={"font-semibold"}>

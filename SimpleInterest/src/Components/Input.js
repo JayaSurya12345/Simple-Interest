@@ -1,4 +1,4 @@
-import styles from '@/styles/Input.module.css'
+import styles from '../styles/Input.module.scss'
 import { useState } from 'react';
 export default function Input({ id, type = '', min = 0, max, step = 1, value, setValue }) {
 
@@ -55,6 +55,7 @@ export default function Input({ id, type = '', min = 0, max, step = 1, value, se
 
     return (
         <div className={styles.inputBox}>
+            <div className="app-bg-container overflow-hidden">
             <div className={' flex justify-between flex-warp items-center'}>
                 <div className=' w-[58%]    '>
                     <input
@@ -84,6 +85,7 @@ export default function Input({ id, type = '', min = 0, max, step = 1, value, se
             </div>
             {(value < min) ? <div className=' text-red-600 text-sm font-normal -mt-[7px] -mb-[13px]'>minimum value is {min}.</div> : ''}
              {(value> max) ? <div className=' text-red-600 text-sm font-normal -mt-[7px] -mb-[13px]'>maximum value is {max}.</div> : ''}
+        </div>
         </div>
     )
 }

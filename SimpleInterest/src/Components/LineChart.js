@@ -2,7 +2,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { useState, useEffect } from "react";
 
-export default function Chart({ points }) {
+export default function Chart({ points}) {
 
     const [options, setOptions] = useState({
         chart: {
