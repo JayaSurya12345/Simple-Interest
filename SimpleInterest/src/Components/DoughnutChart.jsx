@@ -9,7 +9,7 @@ function DoughnutChart({ totalInterestAmount, totalInvestmentAmount, dependency 
     chart: {
       type: 'pie',
       backgroundColor: 'transparent',
-      height: '240px',
+      height: '220px',
     },
     title: {
       text: '',

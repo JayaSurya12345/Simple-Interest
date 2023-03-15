@@ -129,7 +129,7 @@ export default function Home() {
 
                 <div>
                   {/*Interest rate block*/}
-                  <div>Interest rate(p.a.)</div>
+                  <div>Interest rate (p.a.)</div>
                   <Input
                     id='finalInvestment'
                     type='percentage'
@@ -143,7 +143,7 @@ export default function Home() {
 
                 <div>
                   {/*Time Period block*/}
-                  <div>Time Period(Yrs)</div>
+                  <div>Time Period (Yrs)</div>
                   <Input
                     id='timePeriod'
                     min={1}
@@ -229,15 +229,15 @@ export default function Home() {
                     <div className={"mb-3"}>
                       For an investment of {" "}
                       <span className={"font-semibold"}>
-                      ₹{totalInvestment.toLocaleString("en-In")}
-                      </span>{" "}at {interestRate}% simple interest for a period of
+                      Rs.{totalInvestment.toLocaleString("en-In")}
+                      </span>{" "}at <span className={"font-semibold"}>{interestRate}% </span>simple interest for a period of
                        {" "}
                       <span className={"font-semibold"}>
                         {timePeriod}
                       </span>{" "}
                       years,{" "}the simple interest earned will be{" "}
                       <span className={"font-semibold"}>
-                      ₹{output.toLocaleString("en-In")}
+                      Rs.{output.toLocaleString("en-In")}
                       </span>
                     </div>
                   </>
@@ -308,7 +308,7 @@ export default function Home() {
           }
         >
           <CollapsibleBox
-            heading={'What is simpleInterest?'}
+            heading={'What is simple Interest?'}
             content={'Simple interest is a method of calculating the interest on a loan or deposit.It is calculated as the product of the principal amount,interest rate,and time period.'}
           />
 
@@ -326,7 +326,7 @@ export default function Home() {
             heading={'How does the Simple Interest calculator work?'}
             content={
             <>
-            It uses the following logic<br></br><br></br> <b>I = P * R * T <br></br>where: <br></br>I = Interest<br></br> P = Principal (the initial amount) <br></br>R = Interest Rate (as a decimal) <br></br>T = Time Period (in years)</b></>}
+            It uses the following logic<br></br><br></br> <b>I = P * R * T <br></br>Where: <br></br>I = Interest<br></br> P = Principal (the initial amount) <br></br>R = Interest Rate (as a decimal) <br></br>T = Time Period (in years)</b></>}
           />
 
           <CollapsibleBox

@@ -41,7 +41,12 @@ export default function Input({ id, type = '', min = 0, max, step = 1, value, se
             else if (tempValue.length == 2 && tempValue.charAt(0) == '0') {
                 tempValue = tempValue.charAt(1);
             }
-            setTextValue(tempValue);
+            if (!(type==='rupees'||type==='percentage')) {
+                setTextValue(Number(tempValue));    
+            }
+            else{
+                setTextValue(tempValue);
+            }
             setValue(Number(tempValue));
         }
 
